@@ -1,0 +1,126 @@
+body,html {
+	margin: 0px;
+	height:100%;
+}
+
+.unselectable{
+	-moz-user-select: none; 
+	-khtml-user-select: none; 
+	-webkit-user-select: none; 
+	-o-user-select: none; 
+}
+.selectable{
+	-moz-user-select: text; 
+	-khtml-user-select: text; 
+	-webkit-user-select: text; 
+	-o-user-select: text; 
+}
+
+#Container {
+	min-height:100%;
+}
+
+#Header {
+	position: relative;
+	top: 0px;
+	margin: 0px 100px;
+	padding: 0px 150px;
+	color: #fff;
+	background: -moz-linear-gradient(left, rgba(150,30,128,0) 0%, rgba(150,30,128,0.8) 15%, rgba(150,30,128,1) 19%, rgba(150,30,128,1) 21%, rgba(96,18,95,1) 50%, rgba(150,30,128,1) 81%, rgba(150,30,128,0.8) 85%, rgba(150,30,128,0) 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(150,30,128,0)), color-stop(15%,rgba(150,30,128,0.8)), color-stop(19%,rgba(150,30,128,1)), color-stop(21%,rgba(150,30,128,1)), color-stop(50%,rgba(96,18,95,1)), color-stop(81%,rgba(150,30,128,1)), color-stop(85%,rgba(150,30,128,0.8)), color-stop(100%,rgba(150,30,128,0)));
+	background: -webkit-linear-gradient(left, rgba(150,30,128,0) 0%,rgba(150,30,128,0.8) 15%,rgba(150,30,128,1) 19%,rgba(150,30,128,1) 21%,rgba(96,18,95,1) 50%,rgba(150,30,128,1) 81%,rgba(150,30,128,0.8) 85%,rgba(150,30,128,0) 100%);
+	background: -o-linear-gradient(left, rgba(150,30,128,0) 0%,rgba(150,30,128,0.8) 15%,rgba(150,30,128,1) 19%,rgba(150,30,128,1) 21%,rgba(96,18,95,1) 50%,rgba(150,30,128,1) 81%,rgba(150,30,128,0.8) 85%,rgba(150,30,128,0) 100%);
+	background: -ms-linear-gradient(left, rgba(150,30,128,0) 0%,rgba(150,30,128,0.8) 15%,rgba(150,30,128,1) 19%,rgba(150,30,128,1) 21%,rgba(96,18,95,1) 50%,rgba(150,30,128,1) 81%,rgba(150,30,128,0.8) 85%,rgba(150,30,128,0) 100%);
+	background: linear-gradient(to right, rgba(150,30,128,0) 0%,rgba(150,30,128,0.8) 15%,rgba(150,30,128,1) 19%,rgba(150,30,128,1) 21%,rgba(96,18,95,1) 50%,rgba(150,30,128,1) 81%,rgba(150,30,128,0.8) 85%,rgba(150,30,128,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00961e80', endColorstr='#00961e80',GradientType=1 );
+}
+
+#Menu {
+	height:40px;
+}
+#Menu .button{
+	min-width: 100px;
+	padding: 5px;
+	float: left;
+	margin-left: 5px;
+	margin-top: 5px;
+	text-align: center;
+	border-radius: 10px;
+	font: 18px Estrangelo Edessa,Times,'Times New Roman';
+	cursor: pointer;
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+	white-space: nowrap;
+}
+#Menu .button:hover{
+	color: rgb(154, 177, 247);
+	text-decoration: underline;
+}
+
+#Menu .languageicon{
+	width:16px;
+	height:11px;
+	float: left;
+	margin: 4px;
+	cursor:pointer;
+	opacity:0.5;
+}
+
+#Menu .languageicon.de{
+	 background-image:url(../images/icons/de.png);
+}
+#Menu .languageicon.en{
+	 background-image:url(../images/icons/gb.png);
+}
+#Menu .languageicon.pl{
+	 background-image:url(../images/icons/pl.png);
+}
+#Menu .languageicon.active {
+	opacity:1;
+}
+
+#Message{
+	position:absolute;
+	width:100%;
+	height:100%;
+	display:none;
+	z-index: 2000;
+}
+#Message > div {
+	display:table-cell;
+	vertical-align: middle;
+}
+#Message > div > div { 
+	margin: auto;
+	width: 100px;
+	padding: 10px;
+	text-align: center;
+	background: rgb(110, 255, 53);
+	-webkit-box-shadow: 0px 0px 10px 5px rgba(110, 255, 35, 1);
+	-moz-box-shadow: 0px 0px 10px 5px rgba(110, 255, 35, 1);
+	box-shadow: 0px 0px 10px 5px rgba(110, 255, 35, 1);
+	font: small-caps bold 17px/20px "trebuchet MS", sans-serif;
+}
+
+#Tooltip {
+	display:none;
+	position:absolute;
+	z-index:10000;
+}
+
+
+#Footer {
+	height: 25px;
+	margin-top: -30px;
+	background: rgb(194, 194, 194);
+	font: italic 0.7em/140% Georgia,Times,'Times New Roman',serif;
+	text-align: right;
+	padding-top: 5px;
+	padding-right: 5px;
+}
+#Footer span { margin-right:20px; }
+#Footer span:last-child { margin-right: 0px; }
+
+.about {
+	margin: 5px 100px 0px 100px;
+}
