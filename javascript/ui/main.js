@@ -15,23 +15,19 @@ function main() {
 		ForceAttacker = [];
 	}
 	else {
-		ForceAttacker = [new Squad($('#Page .attacker .squad').eq(0),0)];
-		ForceDefender = [new Squad($('#Page .defender .squad').eq(0),1)];
-		
-		ForceAttacker[1] = new Squad($('#Page .attacker .squad').eq(1),0);
+		ForceAttacker = [new Squad($('#Page .attacker .squad').eq(0),0),
+		                 new Squad($('#Page .attacker .squad').eq(1),0),
+		                 new Squad($('#Page .attacker .squad').eq(2),0)];
+		ForceDefender = [new Squad($('#Page .defender .squad').eq(0),1),
+		                 new Squad($('#Page .defender .squad').eq(1),1),
+		                 new Squad($('#Page .defender .squad').eq(2),1),
+		                 new Squad($('#Page .defender .squad').eq(3),1)];
+		ForceAttacker[0].enablehide();
 		ForceAttacker[1].enablehide();
-		
-		ForceAttacker[2] = new Squad($('#Page .attacker .squad').eq(2),0);
 		ForceAttacker[2].enablehide();
-		
-		
-		ForceDefender[1] = new Squad($('#Page .defender .squad').eq(1),1);
+		ForceDefender[0].enablehide();
 		ForceDefender[1].enablehide();
-		
-		ForceDefender[2] = new Squad($('#Page .defender .squad').eq(2),1);
 		ForceDefender[2].enablehide();
-		
-		ForceDefender[3] = new Squad($('#Page .defender .squad').eq(3),1);
 		ForceDefender[3].enablehide();
 	}
 	SystemMain();

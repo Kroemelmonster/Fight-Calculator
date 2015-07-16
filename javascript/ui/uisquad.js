@@ -123,7 +123,7 @@ function uiSquad(element, squad) {
 	});
 	for(var i = 0;(i < squad.army.length); i++) {
 		$(element).find('.unit').eq(i).data("id",i).click(function(e) {
-			if (this != (event.target || event.srcElement)) return; // prevent BUGGGG
+			if (this != (e.target || event.srcElement)) return; // prevent BUGGGG
 			if (squad.race < 4) {
 				var i = $(this).data("id");
 				squad.army[i].level ++;
