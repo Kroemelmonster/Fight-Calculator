@@ -957,5 +957,6 @@ const RUNE_WORD_NAMES = [];
 	RUNE_WORD_NAMES[6] = 'Maximalmana <span style="color:#0f0">+(3000-3600)</span>';
 	RUNE_WORD_NAMES[7] = 'Maximalmana <span style="color:#0f0">+(1000-1200)</span>';
 	RUNE_WORD_NAMES[8] = 'Manaregeneration <span style="color:#0f0">+(300-360)/Std</span>';
+	RUNE_WORD_NAMES[9] = 'Chance jedes Geb&auml;ude zu besch&auml;digen <span style="color:#0f0">+(50-60)%</span>';
 	
 }

@@ -642,14 +642,15 @@ const RUNE_WORD = [];
 					];
 	RUNE_WORD[3] = [[[1,1,0,0,0,0,0,0,0],RUNE_WORD_NAMES[4]]
 					];
-	RUNE_WORD[4] = [[[0,2,1,0,0,0,0,0,0],new Effecttype( ET.HITPOINTS, EA.ALL, EL.EVERYWHERE, ES.ENEMY, ER.ALLWAYS, EC.ALLWAYS, [-10,-11,-12,-13,-14,-15])],
+	RUNE_WORD[4] = [[[0,2,1,0,0,0,0,0,0],new Effecttype( ET.HITPOINTS, EA.ALL, EL.EVERYWHERE, ES.ENEMY, ER.ALLWAYS, EC.ALLWAYS, [-10,-11,-12])],
 	                [[0,0,0,0,0,0,1,1,1],new Effecttype( ET.HITPOINTS, EA.ALL, EL.EVERYWHERE, ES.SELF, ER.ALLWAYS, EC.ALLWAYS, [46,47,48,49,50,51,52,53,54])],
 	                [[4,0,0,0,0,0,0,0,0],new Effecttype( ET.HITPOINTS, EA.ALL, EL.EVERYWHERE, ES.SELF, ER.ALLWAYS, EC.ALLWAYS, [15,16,17,18])],
+	                [[1,0,0,0,0,0,0,1,1],new Effecttype( ET.HITPOINTS, EA.ALL, EL.EVERYWHERE, ES.ENEMY, ER.ALLWAYS, EC.ALLWAYS, [-30,-31,-32,-33,-34,-35,-36])]
 	                ];
 	RUNE_WORD[5] = [];
 	RUNE_WORD[6] = [[[2,2,0,0,0,0,0,0,0],RUNE_WORD_NAMES[5]],
-	                [[3,1,0,0,0,0,0,0,0],new Effecttype( ET.ATTACK, EA.ALL, EL.EVERYWHERE, ES.SELF, ER.ALLWAYS, EC.ALLWAYS, [15,16,17,18])]
-					];
+	                [[3,1,0,0,0,0,0,0,0],new Effecttype( ET.ATTACK, EA.ALL, EL.EVERYWHERE, ES.SELF, ER.ALLWAYS, EC.ALLWAYS, [15,16,17,18])],
+	                [[1,1,1,1,0,0,0,0,0],RUNE_WORD_NAMES[9]]];
 	RUNE_WORD[7] = [];
 	RUNE_WORD[8] = [[[0,3,0,0,0,0,0,0,0],new Effecttype( ET.MTOWER, EA.ALL, EL.EVERYWHERE, ES.ENEMY, ER.ALLWAYS, EC.ALLWAYS, [-5,-6,-7])],
 	                [[0,4,0,0,0,0,0,0,0],new Effecttype( ET.MAXDEFENCE, EA.ALL, EL.EVERYWHERE, ES.SELF, ER.ALLWAYS, EC.ALLWAYS, [5,6,7])],
