@@ -13,7 +13,7 @@ const GENERAL = {
 	COST :			"Lohn",
 	CHANCE : 		["min","norm","max"],
 	CALCULATE :     "Berechne",
-	SERVERTYP :		["Bergbauserver","Kriegsserver"],
+	SERVERTYP :		["Bergbauserver","Kriegsserver","Ökonomieserver"],
 	ROUND : 		"Runde",
 	ROUNDTERROR :	"Terror Runde",
 	ROUNDDEATH :	"Todes Runde",

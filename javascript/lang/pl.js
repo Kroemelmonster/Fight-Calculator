@@ -13,7 +13,7 @@ const GENERAL = {
 	COST :			"Żołd",
 	CHANCE : 		["min","norm","max"],
 	CALCULATE :     "Oblicz",
-	SERVERTYP :		["Bergbauserver","Kriegsserver"],
+	SERVERTYP :		["Bergbauserver","Kriegsserver","Ökonomieserver"],
 	ROUND : 		"Runda",
 	ROUNDTERROR :	"Runda Przerażenia",
 	ROUNDDEATH :	"Runda zabijania",

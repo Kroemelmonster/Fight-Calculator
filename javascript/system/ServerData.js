@@ -91,7 +91,9 @@ function ServerDataObject() {
 		Tooltip.hide();
 	});
 	$('#ServerData .servertyp').click(function () {
-		ServerData.type = 1-ServerData.type;
+		ServerData.type++;
+		if (ServerData.type >= 3)
+			ServerData.type = 0;
 		$(this).html(GENERAL.SERVERTYP[ServerData.type]);
 	});
 	$('#Menu .languageicon').click(function() {
@@ -391,7 +393,8 @@ function ServerDataObject() {
 			code += ";";
 		}
 		code += 'S:';
-		code += CHARS.charAt(this.terrain + (this.type << 4) + (this.maxdefence << 5)); // terrain = 16 , type = 2, max defence = 2  mit 6 belegt
+		code += CHARS.charAt(this.terrain + (this.type << 4)); // terrain = 16 , type = 4 
+		code +=  CHARS.charAt(this.maxdefence);
 		code += CHARS.charAt(this.treasure + (this.special << 3)); // treasure = 8, special = 4 mit 5 belegt
 		
 		code += CHARS.charAt(this.defence.tower[0].level);
@@ -436,7 +439,8 @@ function ServerDataObject() {
 	}
 	this.saveFightDefence = function() {
 		var code = 'S:';
-		code += CHARS.charAt(this.terrain + (this.type << 4) + (this.maxdefence << 5)); // terrain = 16 , type = 2, max defence = 2  mit 6 belegt
+		code += CHARS.charAt(this.terrain + (this.type << 4)); // terrain = 16 , type = 2, max defence = 2  mit 6 belegt
+		code += CHARS.charAt(this.maxdefence);
 		code += CHARS.charAt(this.treasure + (this.special << 3)); // treasure = 8, special = 4 mit 5 belegt
 		
 		code += CHARS.charAt(this.defence.tower[0].level);
@@ -497,15 +501,17 @@ function ServerDataObject() {
 		var code = split[3];
 		
 		var id = GetCharPosition(code.charAt(0));
-		this.maxdefence = id >> 5;
-		if (this.maxdefence > 0)
-			$('#ServerData .row.top .landdefence').css("opacity",1.0);
-		id -= (this.maxdefence << 5);
 		this.type = id >> 4;
 		id -= (this.type << 4);
 		this.terrain = id;
 		$('#ServerData .servertyp').html(GENERAL.SERVERTYP[this.type]);
 		$('#ServerData .dropdown.terrain .show').css('background-image','url(./images/ter'+this.terrain+'.png)');
+		code = code.substring(1);
+		
+		var id = GetCharPosition(code.charAt(0));
+		this.maxdefence = id;
+		if (this.maxdefence > 0)
+			$('#ServerData .row.top .landdefence').css("opacity",1.0);
 		code = code.substring(1);
 		
 		var id = GetCharPosition(code.charAt(0));

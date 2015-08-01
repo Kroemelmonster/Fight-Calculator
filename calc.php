@@ -495,6 +495,7 @@
 				</tr>
 			</table>
 		</div>
+		<div class="servertyp">Bergbauserver</div>
 	</div>
 	<!-- <div class="language">
 		<div class="icon de <?php if ($language_id == 'de') echo 'active'; ?>"></div>

@@ -28,6 +28,15 @@ function Unit(id, squad) {
 	};
 	
 	this.getAttack = function(chance) {
+		// okoarcher
+		if ((ServerData.type == 2) && (this.id == 4)) {
+			if (chance == 0)
+				return SERVEROKOARCHER[this.level]["Attack"][0];
+			else if (chance == 1)
+				return Math.floor((SERVEROKOARCHER[this.level]["Attack"][0]+SERVEROKOARCHER[this.level]["Attack"][1])/2);
+			else
+				return SERVEROKOARCHER[this.level]["Attack"][1];
+		}
 		// demon mercs
 		if ((this.squad.race == 2) && (this.id == 6)){
 			if (chance == 0)
@@ -47,6 +56,10 @@ function Unit(id, squad) {
 		}
 	}
 	this.getHp = function() {
+		// okoarcher
+		if ((ServerData.type == 2) && (this.id == 4)) {
+			return SERVEROKOARCHER[this.level]["Hp"];
+		}
 		return UNITDATA[this.id][this.level]["Hp"];
 	}
 	this.getSpecial = function() {
